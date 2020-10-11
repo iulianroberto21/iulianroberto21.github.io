@@ -94,6 +94,7 @@
     padding: .40px 0;
 }
 
+
 /* SKILL AREA*/
 .site-main .skill-area .container-fluid h1{
     font-weight: bold;
@@ -183,7 +184,6 @@ line-height: 30px;
 .site-main .skill-area .experience-area .call-area{
     padding-left: 10rem;    
 }
-/* END SKILL AREA*/
 
 
 
@@ -216,7 +216,7 @@ line-height: 30px;
 .site-main .project-area .grid .our-project .img a:hover img{
     filter:brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
 }
-/* END PROJECT AREA */
+
 
 
 /* CONTACT ME */
@@ -226,4 +226,3 @@ line-height: 30px;
     padding: 120rem 0;
     margin: 32rem auto;
 }
-/* END CONTACT ME */
