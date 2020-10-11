@@ -7,6 +7,7 @@
 
 /* Global CSS */
 @import url(./partials/_global.css);
+
 /* navigation */
 
 .header_area .main-menu .navbar .navbar-brand {
@@ -38,7 +39,7 @@
     background-clip: text;
 
 }
-/* end navigation */
+
 
 /* Banner Area*/
 .site-main .site-banner{
@@ -76,7 +77,7 @@
 .title-text{
     font: normal bold 50px/72px var(--roboto-regular);
 }
-/* END Banner Area*/
+
 
 /* About Area */
 .site-main .about-area{
@@ -92,7 +93,6 @@
 .site-main .about-area .about-title .paragrapth > p{
     padding: .40px 0;
 }
-/* END About Area */
 
 /* SKILL AREA*/
 .site-main .skill-area .container-fluid h1{
@@ -184,6 +184,7 @@ line-height: 30px;
     padding-left: 10rem;    
 }
 /* END SKILL AREA*/
+
 
 
 /* PROJECT AREA */
