@@ -7,11 +7,11 @@
 
 
  <!-- Bootstrap css file-->
- <link rel="stylesheet" href="../css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/bootstrap.min.css">
 
 
  <!-- font awsome icons -->
-<link rel="stylesheet" href="../css/all.min.css">
+<link rel="stylesheet" href="css/all.min.css">
 
 
 <!-- Magnific Popup css file-->
@@ -19,7 +19,8 @@
  
 
 <!-- Custom css file -->
- <link rel="stylesheet" href="../css/style.css">
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 <body>
@@ -28,8 +29,8 @@
      <!-- HEADER AREA -->
      <header class="header_area">
          <div class="main-menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="logo"></a>
+            <nav class="navbar navbar-expand-md navbar-default bg-dark">
+                <a class="navbar-brand" href="#"><img src="./images/logo1.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,16 +41,16 @@
                       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Skills</a>
+                      <a class="nav-link" href="#skill">Skills</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Portfolio</a>
+                      <a class="nav-link" href="#project">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Contact</a>
+                      <a class="nav-link" href="#subscribe">Contact</a>
                     </li>
                     
                   </ul>
@@ -58,8 +59,11 @@
          </div>
      </header>
      <!-- END HEADER AREA -->
-
-
+     <script>
+     $(window).scroll(function(){
+         $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+     })
+     </script>
     <!---------------  MAIN AREA  --------------->
     <main class="site-main">
 
@@ -73,8 +77,7 @@
                         <h4 class="title-text text-uppercase">JUNIOR FULL STACK DEVELOPER</h4>
                         <div class="site-buttons">
                             <div class="d-flex flex-row flex-wrap">
-                                <a href="https://github.com/iulianroberto21"> <button type="button" class="btn button primary-button mr-4 text-uppercase">github
-                                    </button></a>
+                                <a href="https://github.com/iulianroberto21"><button type="button" class="btn button primary-button mr-4 text-uppercase">github</button></a>
                                 <button type="button" class="btn button secondary-button text-uppercase">get cv</button>
                             </div>
                         </div>
@@ -88,8 +91,8 @@
         <!---- END Banner Area ---->
 
         <!------ ABOUT AREA ------>
-        <section class="about-area">
-            <div class="container-fluid">
+        <section class="about-area" id="about" >
+            <div class="container-fluid" >
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="about-image">
@@ -120,9 +123,9 @@
 
 
         <!-------------- SKILL AREA ---------------->
-        <section class="skill-area">
-            <div class="container-fluid">
-                <h1 class="text-uppercase title-text">Techinal Skills</h1>
+        <section class="skill-area" id="skill" style="padding-left: 20px; padding-bottom: 400px;">
+            <div class="container-fluid float-right">
+                
                 <div class="row">
                     <div class="col-xl-6 col-lg-12 col-md-12">
                         <div class="first-row row">
@@ -133,27 +136,32 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-skill">
-                                    <img src="./images/html5-brands.svg" alt="skill-2">
+                                    <img src="./images/css3-alt-brands.svg" alt="skill-2">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-skill">
-                                    <img src="./images/html5-brands.svg" alt="skill-3">
+                                    <img src="./images/js-square-brands.svg" alt="skill-3">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 center">
+                                <div class="single-skill">
+                                    <img src="./images/PHP_icon-icons.com_68990.svg" alt="skill-4">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-skill">
-                                    <img src="./images/html5-brands.svg" alt="skill-4">
+                                    <img src="./images/dbs-mysql_icon-icons.com_50909.png" alt="skill-5">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-skill">
-                                    <img src="./images/html5-brands.svg" alt="skill-5">
+                                    <img src="./images/wordpress-simple-brands.svg" alt="skill-6">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-skill">
-                                    <img src="./images/html5-brands.svg" alt="skill-6">
+                                    <img src="./images/angular-brands.svg" alt="skill-6">
                                 </div>
                             </div>
                         </div>
@@ -171,7 +179,7 @@
                             <div class="d-flex flex-row flex-wrap call-area">
                                 <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
                                 <div class="call-now">
-                                    <a href="#" class="text-uppercase h4">Call Now</a>
+                                    <a class="text-uppercase h4">Call Now</a>
                                     <span class="py-2">0726605721</span>
                                 </div>
                             </div>
@@ -181,15 +189,16 @@
                 </div>
             </div>
         </section>
+        <br>
+        <br>
         <!-------------- END SKILL AREA ---------------->
 
         <!-------------------Project Area---------------------->
-        <section class="project-area">
-            <div class="container">
+        <section class="project-area" style="padding-left: 40px;">
+            <div class="container" id="project" >
                 <div class="project-title pb-5">
-                    <h1 class="text-uppercase title-h1">My Projects</h1>
+                     <h1 class="text-uppercase title-h1">My Projects</h1>
                 </div>
-
                     <div class="button-group">
                         <button type="button" class="active" id="btn1" data-filter="*">All</button>
                         <button type="button" data-filter=".popular">Popular</button>
@@ -321,62 +330,85 @@
             </div>
         </section>
         <!-------------------END Project Area---------------------->
-    </main>
-    <!---------------  END MAIN AREA  --------------->
+    
 
-    <!---------- CONTACT ME ------------>
-    <section class="contact-me">
-    <div class="container contact">
-        <div class="row">
-            <div class="col-lg-12 text-center contact-title">
-                <h1 class="text-uppercase">Contact me</h1>
+    <!---------- SUBSCRIBE ME ------------>
+    <section class="subscribe-me-area" id="subscribe" >
+        <div class="container subscribe">
+            <div class="row">
+                <div class="col-lg-12 text-center subscribe-title">
+                    <h4 class="text-uppercase">Get Update From anywhere</h4>
+                    <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quis minima harum quibusdam reprehenderit</p>
+                </div>
             </div>
-        </div>
         <div class="d-sm-flex justify-content-center">
             <form class="w-50">
                 <div class="row d-flex flex-row flex-wrap">
-                    <div class="name">
-                        <input label="Name" type="textarea" id="name" class="form-control" name="name">
-                    </div>
-                    <div class="col input-texbox">
-                        <input type="text" id="txtemail" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="col input-texbox">
-                        <input type="text" id="txtemail" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="col input-texbox">
+                    <div class="col input-textbox">
                         <input type="text" id="txtemail" class="form-control" placeholder="Email">
                     </div>
                     <div class="col">
                         <div class="btn-submit">
-                            <button type="submit" class="btn btn-success float-right">Submit</button>
+                            <button type="submit" class="btn btn-succes float=right">Subscribe</button>
                         </div>
                     </div>
-                </div>            
+                </div>
             </form>
         </div>
     </div>
-</section>           
+    </section>
         
-    <!---------- END CONTACT ME ------------>
+    <!---------- END SUBCRIBE ME ------------>
+</main>
+<!---------------  END MAIN AREA  --------------->
+<footer class="footer-area">
+    <div class="container">
+        <div class="">
+            <div class="site-logo text-center py-4">
+                <a href="#"><img src="/images/logo.png" alt="logo"></a>
+            </div>
+            <div class="social text-center">
+                <h5 class="text-uppercase">Follow me</h5>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="copyrights text-center">
+                <p class="para">
+                    Copyright @2020 All rights reserved | This template is made by
+                    <a href="#"><span style="color: var(--primary-color2);">Roberto</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
 
     <!-- Jquery js file-->
-    <script src="./js/jquery.3.5.1.js"></script>
+    <script src="js/jquery.3.5.1.js"></script>
 
     <!-- Bootstrap js file-->
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 
     <!-- ISOTOPE JS library -->
-    <script src="./vendor/isotope/isotope.min.js"></script>
+    <script src="vendor/isotope/isotope.min.js"></script>
 
 
     <!-- Magnific Popup js file-->
-    <script src="./vendor/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
 
 
     <!-- custom scripjst file -->
-    <script src="./js/main.js"></script>
+    <script src="/js/main.js"></script>
+
+  
 
 </body>
 </html>
