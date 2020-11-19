@@ -121,41 +121,43 @@ if (glide)
 
 // My Project //
 
-(function(){
+$(function () {
 
-    'use strict';
+ $("#services-tabs").responsiveTabs({
+     animation: 'slide'
+ });
 
 
-    var $projects = $('.projects');
 
-    $projects.isotope({
-        itemSelector: '.item',
-        layoutMode: 'fitRows'
-    });
+  $('.gallery').magnificPopup({
+     delegate: '.popimg',
+     type: 'image',
+     gallery: {
+         enabled: true
+     }
+ });
+   $('.gallery').isotope({
+   // options
+   itemSelector: '.items'
+ });
 
-    $('ul.filters > li').on('click', function(e){
+ var $gallery = $('.gallery').isotope({
+   // options
+ });
 
-        e.preventDefault();
+ // filter items on button click
+ $('.filtering').on( 'click', 'span', function() {
 
-        var filter = $(this).attr('data-filter');
+     var filterValue = $(this).attr('data-filter');
 
-        $('ul.filters > li').removeClass('active');
-        $(this).addClass('active');
+     $gallery.isotope({ filter: filterValue });
 
-        $projects.isotope({filter: filter});
+ });
 
-    });
+ $('.filtering').on( 'click', 'span', function() {
 
-    $('.card').mouseenter(function(){
+     $(this).addClass('active').siblings().removeClass('active');
 
-        $(this).find('.card-overlay').css({'top': '-100%'});
-        $(this).find('.card-hover').css({'top':'0'});
+ });
 
-    }).mouseleave(function(){
-
-        $(this).find('.card-overlay').css({'top': '0'});
-        $(this).find('.card-hover').css({'top':'100%'});
-
-    });
-
-})(jQuery);
+}); 
